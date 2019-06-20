@@ -6,17 +6,21 @@ let button;
 
 let videoBlockArray =[
   new VideoBlock(330,110,'video/dynamite/d11.mp4', 3,1, true, "bottomleft", true),
+
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d12.mp4', 3,2, false, "topright", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d13.mp4', 3,3, false, "topleft", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d14.mp4', 3,4, false, "bottomright", false),
+
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d21.mp4', 4,1, false, "topright", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d22.mp4', 4,2, false, "topright", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d23.mp4', 4,3, false, "topleft", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d24.mp4', 4,4, false, "bottomright", false),
+
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d31.mp4', 5,1, false, "topright", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d32.mp4', 5,2, false, "topleft", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d33.mp4', 5,3, false, "bottomright", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d34.mp4', 5,4, false, "topright", false),
+
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d41.mp4', 6,1, false, "topright", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d42.mp4', 6,2, false, "topleft", false),
   new VideoBlock(Math.random()*900,Math.random()*500,'video/dynamite/d43.mp4', 6,3, false, "bottomright", false),
@@ -132,25 +136,27 @@ function draw() {
         image(winningImage, (width-900)/2, (height-800)/2, 900, 400)
         videoBlockArray.forEach(video => myFunction())
         nextLevel.style('display', 'block')
-           
+        
+
             
         setTimeout(()=>{
         nextLevel.style('display', 'none')
         if(playing)
         toggleVid()
         console.log("toggle")
-        game.level = 2},3000)
+        game.level = 2},7000)
         };
     }
 
       if(game.level ===2){
-        clear()
-        game.drawGrid();
-        videoBlockArrayLvl.forEach(video => video.draw())
-        let winTest = videoBlockArrayLvl.filter(obj=> obj.win==false)
-        if(winTest.length==0){
-            image(winningImage, (width-900)/2, (height-400)/2, 900, 400)
-            videoBlockArray.forEach(video => myFunction2())
+
+          clear()
+          game.drawGrid();
+          videoBlockArrayLvl.forEach(video => video.draw())
+          let winTest = videoBlockArrayLvl.filter(obj=> obj.win==false)
+          if(winTest.length==0){
+          image(winningImage, (width-900)/2, (height-400)/2, 900, 400)
+          videoBlockArray.forEach(video => myFunction2())
 
         };
   }

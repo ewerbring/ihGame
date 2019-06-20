@@ -9,6 +9,7 @@ class Game {
         line(x, 0, x, 1000);
         line(0, x, windowWidth, x)
         stroke(255, 204, 0);
+       
 
         x+=110;
       }

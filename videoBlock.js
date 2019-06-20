@@ -22,6 +22,12 @@ class VideoBlock{
         image(this.video,this.x,this.y,110,110)
         if (this.isStatic) {
             this.overBox = false
+            //   =====================change for single out stiff videotile
+            // noStroke()
+            noFill()
+            stroke("red")
+            rect(this.x,this.y,110,110)
+            
         }
     
         else {
@@ -45,7 +51,9 @@ class VideoBlock{
     mousePressed() {
         if (this.overBox) {
           this.locked = true;
-
+        //   =====================change for single out stiff videotile
+        //   strokeWeight(5);
+        //   stroke(111);
         } else {
           this.locked = false;
 
@@ -61,5 +69,6 @@ class VideoBlock{
     }
     mouseReleased() {
         this.locked = false;
+        
     }
 }
