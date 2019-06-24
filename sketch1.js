@@ -71,15 +71,18 @@ function preload() {
   videoBlockArrayLvl.forEach(video => {
     video.preload()
   })
-  winningImage = loadImage('assets/win.png');
+  winningImage = loadImage('assets/win2.png');
 }   
 
 function setup() {
   canvas = createCanvas(1100, 770);
-  canvas.position((windowWidth-1100)/2,(windowHeight-770)/2 );
+  canvas.position((windowWidth-1100)/1.2,(windowHeight-770)/2 );
   canvas.parent("bodywrapper")
+  document.getElementById("myText").innerHTML = score;
+
   button = createButton('play');
   button.mousePressed(toggleVid); 
+
   nextLevel =  createA('lvl1.html/', 'NEXT LEVEL');
   nextLevel.style('display', 'none')
   
@@ -121,8 +124,8 @@ function myFunction() {
 }}
 function myFunction2() {
   if(score<videoBlockArrayLvl.length){
-  newscore = score+videoBlockArrayLvl.length;
-  document.getElementById("myText").innerHTML = newscore;
+    score = score+1;
+    document.getElementById("myText").innerHTML = score;
 }}
 
 
@@ -133,9 +136,9 @@ function draw() {
         videoBlockArray.forEach(video => video.draw())
         let winTest = videoBlockArray.filter(obj=> obj.win==false)
         if(winTest.length==0 && playing){
-        image(winningImage, (width-900)/2, (height-800)/2, 900, 400)
+        image(winningImage, (width-900)/2, (height-400)/2, 900, 400)
         videoBlockArray.forEach(video => myFunction())
-        nextLevel.style('display', 'block')
+        nextLevel.style('display', 'none')
         
 
             
@@ -180,3 +183,31 @@ function mousePressed() {
     videoBlockArrayLvl.forEach(video => video.mouseDragged())
     }
   }
+
+
+  var clicks = 0;
+var linkOne = `<a href="p1.html" onclick="javascript:void window.open('p1.html','pu1','width=700,height=500,toolbar=0,menubar=0,location=1,status=1,scrollbars=0,resizable=1,left=30vw,top=0');return false;">Yes</a>`;
+
+
+
+ function onClick() {
+   clicks += 1;
+   var message = "";
+   if(clicks==1)
+     { message = "This text consists of some tangled extracts from an conversation with Cem Eskinazi";}
+else if(clicks==2)
+   {message ="What is a strange loop?";}
+else if(clicks==3)
+   {message ="Do you want me to tell you that?";}
+else if(clicks==4)
+     {message = "Yes try to explain it";}
+else if(clicks==5)
+     {message = "Ok. I mean it is very complicated, but I like to think of Paradoxes. It is an easy way to wrap your mind around in a loop.";}
+else if(clicks==6)
+     {message = "Do you have an example?";}
+else if(clicks==7)
+     {message = linkOne}
+   document.getElementById("gemAndCalle").innerHTML = message;
+
+
+ };

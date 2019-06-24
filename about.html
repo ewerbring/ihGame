@@ -10,9 +10,39 @@
 <body">
 <div class="gifwrapper2">
 
-    <h1>this was created</h1>
+    <h2 onclick="onClick()" id="clicker">What is this?</h2>
+
 
 </div>
+
+<div id="gemAndCalle">halle</div>
+
+<script>
+        var clicks = 0;
+    
+            function onClick() {
+                
+                clicks += 1;
+                var message = "";
+                if(clicks==1)
+                { message = "This text consists of some tangled extracts from an conversation with Cem Eskinazi";}
+                else if(clicks==2)
+                {message ="What is a strange loop?";}
+                else if(clicks==3)
+                {message ="Do you want me to tell you that?";}
+                else if(clicks==4)
+                {message = "Yes try to explain it";}
+                else if(clicks==5)
+                {message = "Ok. I mean it is very complicated, but I like to think of Paradoxes. It is an easy way to wrap your mind around in a loop.";}
+                else if(clicks==6)
+                {message = "Do you have an example?";}
+                else if(clicks==7)
+                {message = linkOne}
+                document.getElementById("gemAndCalle").innerHTML = message;
+                
+                
+            };
+            </script>
 </body">
 </html>
 

@@ -1,10 +1,12 @@
 
 
 body{
-    background-color:blue;
+    background-color: rgb(3, 49, 202);
     overflow: hidden;
     border: 0;
     padding: 0;
+    cursor: url(assetsd/cursor.png), auto;
+    font-family: arial;
 }
 
 h1{
@@ -51,3 +53,104 @@ h2 {
     background-size: cover; /* Resize the background image to cover the entire container */
   }
   
+
+
+  button{
+      background-color:  rgba(255,255,255,0.01);
+      color: white;
+      width: 250px;
+      height: auto;
+      border:2px solid white;
+      margin: 20px;
+      border-radius: 1px;
+      font-size: 40px;
+      padding: 20px;
+      margin-top: 0;
+      text-align: left;
+      
+  }
+
+button:hover{
+box-shadow: 0px 0px 100px rgba(255,255,255,0.1);
+
+}
+  #abouttext {
+      width: 50vw;
+  }
+
+  .textcontainer{
+      height: auto;    
+      display: block;
+      width: 250px;
+      border: 2px solid white;
+      margin: 20px;
+      padding: 20px;
+      margin-top: 80px;
+      color: white;
+      font-size: 40px;
+  }
+  .textcontainer2{
+      height: auto;
+      display: block;
+      width: 250px;
+      border: 2px solid white;
+      margin: 20px;
+      padding: 20px;
+      color: white;
+      font-size: 40px;
+  }
+
+
+  .link {
+      font-size: 30px;
+      color: white;
+      font-family: "Open Sans", Helvetica, Arial;
+      font-weight: bolder;
+      font-size: 28px;
+      color: white;
+      -webkit-text-stroke: 1px black;
+      paint-order: stroke fill;
+      text-shadow: 2px 2px 2px blue;
+
+  }
+
+a.visited {
+    color: white;
+}
+
+
+	#gemAndCalle {
+	    height: auto;
+	    width: 500px;
+	    position: fixed;
+	    bottom: 40px;
+	    left: 72px;
+	    margin-left: ;
+	    overflow-y: hidden;
+	    text-align: center;
+	    font-family: "Open Sans", Helvetica, Arial;
+	    font-weight: bolder;
+	    font-size: 28px;
+	    color: white;
+	    -webkit-text-stroke: 1px black;
+	    paint-order: stroke fill;
+	    text-shadow: 2px 2px 2px blue;
+
+    }
+    
+    #clicker{
+        height: auto;
+	    position: fixed;
+	    top: 20px;
+	    left: 40px;
+	    overflow-y: hidden;
+	    text-align: left;
+	    font-family: "Open Sans", Helvetica, Arial;
+	    font-weight: bolder;
+	    font-size: 28px;
+        color: white;
+        -webkit-text-stroke: 1px black;
+	    paint-order: stroke fill;
+	    text-shadow: 2px 2px 2px blue;
+
+    }

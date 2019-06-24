@@ -10,13 +10,39 @@
 <body">
 <div class="gifwrapper">
 
-    <h2>
-        Move around the puzzle pieces and try to get them to match. To score, the play button needs to be pressed down and the pieces need to be placed in he right position. The piece with a red frame is not movable, so build the puzzle around that piece.
-        <br>
-        <br>
-        Pro tip: Pause the video when 
-    </h2>
+        <h2 onclick="onClick()" id="clicker">What is this?</h2>
 
+  
+<div id="gemAndCalle"></div>
+
+<script>
+        var clicks = 0;
+    
+            function onClick() {
+                
+                clicks += 1;
+                var message = "";
+                if(clicks==1)
+                { message = "This website is a video puzzle";}
+                else if(clicks==2)
+                {message ="You score points by re-arranging the pieces";}
+                else if(clicks==3)
+                {message ="When all the pieces are in their correct position, and the video is playing, you score.";}
+                else if(clicks==4)
+                {message = "Use the square with a red frame as a starting point";}
+                else if(clicks==5)
+                {message = "Because it's position can't change";}
+                else if(clicks==6)
+                {message = "Pro tip: pause the video when all squares are filled";}
+                else if(clicks==7)
+                {message = "This puzzle was made as an assignment at Ironhack web dev bootcamp 2019 ";}
+                else if(clicks==8)
+                {clicks = 0}
+                document.getElementById("gemAndCalle").innerHTML = message;
+                
+                
+            };
+            </script>
 </div>
 </body">
 </html>
